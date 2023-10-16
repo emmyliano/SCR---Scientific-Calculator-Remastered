@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Src/images/img.jpg">
+<img src="Src/images/img.png">
 </p>
 
 
@@ -16,7 +16,7 @@
 
 ### DEVELOPERS
 
-- [**Emmyliano**](https://github.com/BDhackers009)
+- [**Emmyliano**](https://github.com/emmyliano)
 - [**CPU Governor**](https://github.com/CPU-governor)
 
 ### CONTRIBUTIONS & SUPPORT
