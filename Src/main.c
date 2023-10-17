@@ -21,5 +21,5 @@ int main()
         default:
             printf("Invalid Selection");
     }
-
+return 0;
 }
