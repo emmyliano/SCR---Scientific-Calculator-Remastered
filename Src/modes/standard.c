@@ -24,8 +24,7 @@ int standard(){
     switch(operator){
         case 'e' : exit(0); //exit out of the loop
         break;
-        case 'm' : //return back to main (mode selection)
-                         // although main hasn't been linked yet
+        case 'm' : //return back to main (mode selection), although main hasn't been linked yet
         break;
         case '+':
         result = num1 + num2;
