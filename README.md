@@ -1,5 +1,5 @@
 
-#SCR 
+# SCR 
 Scientific Calculator Remastered 
 
 <p align="center">
