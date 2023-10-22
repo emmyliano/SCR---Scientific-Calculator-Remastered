@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+void standard();
 
-void standard ( ) {
+void standard( ) {
     char operator;
     double num1, num2, result;
     char choice = 'y'; // Initialize choice with 'y'
@@ -9,8 +10,7 @@ void standard ( ) {
     while (choice == 'y' || choice == 'Y')
      {  
         printf("press 'e' to exit, 'm' to go back to mode selection ");
-        printf("\n");
-        printf("\n");
+        printf("\n\n");
         printf("Enter an operator: ");
         scanf(" %c", &operator);
 
