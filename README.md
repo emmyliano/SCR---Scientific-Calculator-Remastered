@@ -1,3 +1,7 @@
+
+# SCR 
+Scientific Calculator Remastered 
+
 <p align="center">
 <img src="Src/Images/img.jpg">
 </p>
