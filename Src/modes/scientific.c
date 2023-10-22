@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-// void scientific();
+void scientific();
 
 void scientific(){
     double x, y, result;

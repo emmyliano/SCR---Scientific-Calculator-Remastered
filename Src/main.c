@@ -1,34 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+int menu();
 
-int running; // This is a boolean to check if the app is running
-
-int main()
+int menu()
 {
-    int i;
-    char exit;
-    if(running = 1){
-        printf("\nInput E to exit the app\nPress enter to continue\n");
-        printf("> ");
-        scanf("%c", &exit);
-    }
-
-    if (exit == 'e' || exit == 'E') {
-            return; // Exit the program if 'e' is pressed
-    }
-
-    for (i = 1; i<= 5; i++){
-        // This should keep the app running till exit
-        int running = 0;
-        greeting();
-    }
-
-    return 0;
-}
-
-int greeting()
-{
-    int running = 1;
     int mode;
     printf("\nSelect 1 for standard calculator, \nSelect 2 for scientific calculator mode, \nSelect 3 for binary converter mode\n");
     printf(" \n> ");
@@ -47,4 +22,27 @@ int greeting()
         default:
             printf("Invalid Selection");
     }
+    return 0;
+}
+
+int main()
+{
+    int i = 0;
+    char stop;
+
+    for (i = 1; i<= 5; i++){ // This should keep the app running till stop
+        menu();
+
+        if(i >= 1){
+            printf("\nInput E to exit the app\nPress any other key to continue\n");
+            printf("> ");
+            scanf("%s", &stop);
+
+            if (stop == 'e' || stop == 'E') {
+            return 0; // stop the program if 'e' is pressed
+            }
+        }
+
+    }
+    return 0;
 }
