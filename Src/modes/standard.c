@@ -8,7 +8,7 @@ void standard( ) {
     char choice = 'y'; // Initialize choice with 'y'
 
     while (choice == 'y' || choice == 'Y')
-     {  
+    {  
         printf("press 'e' to exit, 'm' to go back to mode selection ");
         printf("\n\n");
         printf("Enter an operator: ");
