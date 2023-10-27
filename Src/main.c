@@ -5,22 +5,37 @@ int menu();
 int menu()
 {
     int mode;
-    printf("\nSelect 1 for standard calculator, \nSelect 2 for scientific calculator mode, \nSelect 3 for binary converter mode\n");
-    printf(" \n> ");
-    scanf("%d", &mode);
-    
-    switch(mode){
-        case 1:
-            printf("The switching is working\n");
+    int i = 1;
+    int isValid;
+
+    for (isValid = 1; i <= 4; i++){
+        
+        printf("\nSelect 1 for standard calculator, \nSelect 2 for scientific calculator mode, \nSelect 3 for binary converter mode\n");
+        printf(" \n> ");
+        scanf("%d", &mode);
+        
+
+        switch(mode){
+            case 1:
+                printf("The switching is working\n");
+                break;
+            case 2:
+                // call scientific calculator
+                break;
+            case 3:
+                // call binary converter
+                break;
+            default:
+                printf("\nInvalid Selection\n");
+                //continue;
+        }
+
+
+        if (mode == 1 || mode == 2 || mode == 3)
+        {
+            isValid = 0;
             break;
-        case 2:
-            // call scientific calculator
-            break;
-        case 3:
-            // call binary converter
-            break;
-        default:
-            printf("Invalid Selection");
+        }
     }
     return 0;
 }
