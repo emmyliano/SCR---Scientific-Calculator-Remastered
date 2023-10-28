@@ -1,111 +1,116 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-void scientific();
+#include<stdio.h>
+#include<math.h>
+void square_root ( );
+void square();
+void trig ();
+int /*scientific */ main ( )
+{
+	int choice;
+	printf("Select the corresponding numbers :\n");
+	printf("1. square root\n");
+	printf("2. square\n");
+	printf("3. tan, cos, sin. and it's inverse\n");
+	scanf("%d", &choice);
+	switch (choice)
+	{
+		case 1: square_root ( ) ;
+		break;
+		case 2:  square( );
+		break;
+		case 3: trig( );
+		break;
+		default : printf("wrong input");
+		
+	}
+	return 0;
+}
 
-void scientific(){
-    double x, y, result;
-    int i, operation;
+void square_root (	)
+{
+	int result;
+	float num;
+	system("cls"); // the <system cls> clears the screen as soon as the square root function is called
+	printf("enter a number: ");
+	scanf("%f", &num);
+	result=pow(num,0.5);
+	printf("the square root of %.0f ", num);
+	printf("is : %d\n", result);
+	puts("\n"); // puts is the same as printf lol
+	main (	);
+	
+}
 
-    printf("Press 'e' to exit, 'm' to go back to mode selection ");
-        printf("\n\n");
-        printf("Select operation to perform: ");
-        scanf(" %d", &operation);
+void square( )
+{
+	system("cls");// the <system cls> clears the screen as soon as the square function is called
+	float num, result;
+	printf("enter a number: ");
+	scanf("%f", &num);
+	result=num*num;
+	printf("the square of %.0f ", num);
+	printf("is : %.0f\n", result);	
+	puts("\n"); //puts is the same as printf lol 
+	main( );
+}
+void trig()
+{
+    system("cls");
+    int select;
+    float num, result;
+    printf("1. tan\n");
+    printf("2. cos\n");
+    printf("3. sin\n");
+    printf("4. cos inverse\n");
+    printf("5. tan inverse\n");
+    printf("6. sin inverse\n");
+    scanf("%d", &select);
 
-    printf("Enter value to operate: ");
-        scanf("%lf", &x);
-
-    switch(operation)
+    switch (select)
     {
-        case 1: // sqrt
-            result = sqrt(x);
-            printf("%lf", result);
-            break;
+    case 1:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = tan(num);
+        printf("tan of %.2f is: %.2f", num, result);
+        break;
 
-        case 2: // inverse of x
-            result = 1/x;
-            printf("%lf", result);
-            break;
+    case 2:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = cos(num);
+        printf("cos of %.2f is: %.2f", num, result);
+        break;
 
-        case 3: // power of x
-            printf("Enter power: ");
-            scanf("%lf", &y);
-            result = pow(x, y);
-            printf("%lf", result);
-            break;
+    case 3:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = sin(num);
+        printf("sin of %.2f is: %.2f", num, result);
+        break;
 
-        // case 4: // remainder from a division
-        //     printf("Enter divisor: ");
-        //     scanf("%lf", &y);
-        //     result = (x%y);
-        //     printf("%lf", result);
-        //     break;
+    case 4:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = acos(num);
+        printf("cos inverse of %.2f is: %.2f", num, result);
+        break;
 
-        case 5: // square of x
-            result = pow(x, 2);
-            printf("%lf", result);
-            break;
+    case 5:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = atan(num);
+        printf("tan inverse of %.2f is: %.2f", num, result);
+        break;
 
-        case 6: // sin x
-            result = sin(x * 3.14159 / 180);
-            printf("%lf", result);
-            break;
+    case 6:
+        printf("enter a number: ");
+        scanf("%f", &num);
+        result = asin(num);
+        printf("sin inverse of %.2f is: %.2f", num, result);
+        break;
 
-        case 7: // cos x
-            result = cos(x * 3.14159 / 180);
-            printf("%lf", result);
-            break;
-
-        case 8: // tan x
-            result = tan(x * 3.14159 / 180);
-            printf("%lf", result);
-            break;
-
-        case 9: // cosec x
-            result = 1 / (sin(x * 3.14159 / 180));
-            printf("%lf", result);
-            break;
-
-        case 10: // sec x
-            result = 1 / (cos(x * 3.14159 / 180));
-            printf("%lf", result);
-            break;
-
-        case 11: // cot x
-            result = 1 / (tan(x * 3.14159 / 180));
-            printf("%lf", result);
-            break;
-
-        case 12: // log x
-            result = log(x);
-            printf("%lf", result);
-            break;
-
-        case 14: // antilog x
-            result = pow(10, x);
-            printf("%lf", result);
-            break;
-
-        case 15: // exponent of x
-            result = exp(x);
-            printf("%lf", result);
-            break;
-
-        case 16: // ln x
-            y = exp(x);
-            result = pow(y, -1);
-            printf("%lf", result);
-
-        case 17: // factorial of x
-            result = 1;
-            for (i = 1; i<= x; i++)
-            {
-                result = result * i;
-            }
-            printf("%lf", result);
-            break;
-
+    default:
+        printf("Invalid input");
+        break;
     }
-
-
 }
