@@ -4,13 +4,36 @@ int menu();
 
 int menu()
 {
-    int mode;
+    int mode, j, k;
     int i = 1;
     int isValid;
 
     for (isValid = 1; i <= 4; i++){
         
-        printf("\nSelect 1 for standard calculator, \nSelect 2 for scientific calculator mode, \nSelect 3 for binary converter mode\n");
+        for (j = 0; j <= 20; j++)
+        {
+            printf("=");
+            if (j == 10)
+            {
+                printf("Calculator");
+            }
+        }
+
+        printf("\n\n1. Standard(Add, Div, Multi, Sub)\n");
+        printf("2. Scientific(tan, cos, sqr root, ... ,)\n");
+        printf("3. Binary Conversion(octa, hexa, deci, ...)\n");
+        printf("4. Exit\n\n");
+        
+        for (k = 0; k <= 24; k++)
+        {
+            printf("=");
+            if (k == 12)
+            {
+                printf("2023");
+            }
+            
+        }
+        
         printf(" \n> ");
         scanf("%d", &mode);
         
@@ -25,6 +48,8 @@ int menu()
             case 3:
                 // call binary converter
                 break;
+            case 4:
+                return 0;
             default:
                 printf("\nInvalid Selection\n");
                 //continue;
@@ -54,7 +79,8 @@ int main()
             scanf("%s", &stop);
 
             if (stop == 'e' || stop == 'E') {
-            return 0; // stop the program if 'e' is pressed
+                printf("\n[Program Finished]");
+                return 0; // stop the program if 'e' is pressed
             }
         }
 
