@@ -1,11 +1,30 @@
 #include<stdio.h>
 #include<math.h>
-void square_root ( );
+void square_root();
 void square();
-void trig ();
-int /*scientific */ main ( )
+void trig();
+int sciMenu();
+
+int /*scientific */ main()
 {
-	int choice;
+    int i, stop;
+	for (i = 1; i<= 5; i++){ // This should keep the app running till stop
+        sciMenu();
+
+        if(i > 1){
+            printf("\nInput E to exit\nPress any other key to continue\n");
+            printf("> ");
+            scanf("%s", &stop);
+
+            if (stop == 'e' || stop == 'E') {
+                return 0; // stop the program if 'e' is pressed
+            }
+        }
+    }
+}
+
+int sciMenu(){
+    int choice;
 	printf("Select the corresponding numbers :\n");
 	printf("1. square root\n");
 	printf("2. square\n");
@@ -13,14 +32,17 @@ int /*scientific */ main ( )
 	scanf("%d", &choice);
 	switch (choice)
 	{
-		case 1: square_root ( ) ;
-		break;
-		case 2:  square( );
-		break;
-		case 3: trig( );
-		break;
-		default : printf("wrong input");
-		
+		case 1:
+            square_root() ;
+		    break;
+		case 2:
+            square();
+		    break;
+		case 3:
+            trig();
+		    break;
+		default : 
+            printf("Invalid Input");
 	}
 	return 0;
 }
@@ -63,6 +85,7 @@ void trig()
     printf("4. cos inverse\n");
     printf("5. tan inverse\n");
     printf("6. sin inverse\n");
+    printf("> ");
     scanf("%d", &select);
 
     switch (select)
