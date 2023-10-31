@@ -3,37 +3,44 @@
 void square_root();
 void square();
 void trig();
-int sciMenu();
+int scientificMenu();
 
-int /*scientific */ main()
+void /*scientific */ main()
 {
-    int i, stop;
+    int i;
+    char stop;
 	for (i = 1; i<= 5; i++){ // This should keep the app running till stop
-        sciMenu();
 
-        if(i > 1){
-            printf("\nInput E to exit\nPress any other key to continue\n");
+        if(i >= 2){
+
+            scientificMenu();
+            printf("Input E to return to mode selection\nPress any other key to continue\n");
             printf("> ");
             scanf("%s", &stop);
-
+            
             if (stop == 'e' || stop == 'E') {
-                return 0; // stop the program if 'e' is pressed
+                // link the mode selection here
+                return 0;
+                // for now return 0 should exit, till we link the mode
             }
         }
     }
 }
 
-int sciMenu(){
+
+int scientificMenu(){
     int choice;
-	printf("Select the corresponding numbers :\n");
-	printf("1. square root\n");
-	printf("2. square\n");
+	printf("\nInput:\n");
+	printf("1. Square root\n");
+	printf("2. Square\n");
 	printf("3. tan, cos, sin. and it's inverse\n");
+    printf("> ");
 	scanf("%d", &choice);
+
 	switch (choice)
 	{
 		case 1:
-            square_root() ;
+            square_root();
 		    break;
 		case 2:
             square();
@@ -47,33 +54,32 @@ int sciMenu(){
 	return 0;
 }
 
-void square_root (	)
+void square_root()
 {
-	int result;
-	float num;
+	double num, result;
 	system("cls"); // the <system cls> clears the screen as soon as the square root function is called
-	printf("enter a number: ");
-	scanf("%f", &num);
+	printf("Enter number: ");
+	scanf("%lf", &num);
 	result=pow(num,0.5);
-	printf("the square root of %.0f ", num);
-	printf("is : %d\n", result);
-	puts("\n"); // puts is the same as printf lol
-	main (	);
-	
+	printf("The square root of %lf ", num);
+	printf("is : %lf\n", result);
+	puts("\n"); // puts is the same as printf lol	
 }
 
-void square( )
+
+void square()
 {
 	system("cls");// the <system cls> clears the screen as soon as the square function is called
 	float num, result;
-	printf("enter a number: ");
+	printf("Enter number: ");
 	scanf("%f", &num);
-	result=num*num;
-	printf("the square of %.0f ", num);
+	result = num * num;
+	printf("The square of %.0f ", num);
 	printf("is : %.0f\n", result);	
-	puts("\n"); //puts is the same as printf lol 
-	main( );
+	puts("\n"); //puts is the same as printf lol
 }
+
+
 void trig()
 {
     system("cls");
@@ -88,45 +94,45 @@ void trig()
     printf("> ");
     scanf("%d", &select);
 
-    switch (select)
+    switch(select)
     {
     case 1:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = tan(num);
         printf("tan of %.2f is: %.2f", num, result);
         break;
 
     case 2:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = cos(num);
         printf("cos of %.2f is: %.2f", num, result);
         break;
 
     case 3:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = sin(num);
         printf("sin of %.2f is: %.2f", num, result);
         break;
 
     case 4:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = acos(num);
         printf("cos inverse of %.2f is: %.2f", num, result);
         break;
 
     case 5:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = atan(num);
         printf("tan inverse of %.2f is: %.2f", num, result);
         break;
 
     case 6:
-        printf("enter a number: ");
+        printf("Enter number: ");
         scanf("%f", &num);
         result = asin(num);
         printf("sin inverse of %.2f is: %.2f", num, result);

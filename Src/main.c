@@ -40,7 +40,7 @@ int menu()
 
         switch(mode){
             case 1:
-                printf("The switching is working\n");
+                // printf("The switching is working\n");
                 break;
             case 2:
                 // call scientific calculator
@@ -72,6 +72,7 @@ int main()
 
     for (i = 1; i<= 5; i++){ // This should keep the app running till stop
         menu();
+        system("cls");
 
         if(i >= 1){
             printf("\nInput E to exit the app\nPress any other key to continue\n");

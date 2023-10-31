@@ -2,7 +2,8 @@
 #include <stdlib.h>
 void standard();
 
-void standard( ) {
+void standard()
+{
     char operator;
     double num1, num2, result;
     char choice = 'y'; // Initialize choice with 'y'
