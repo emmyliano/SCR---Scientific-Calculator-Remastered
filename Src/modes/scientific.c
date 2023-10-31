@@ -9,11 +9,9 @@ void /*scientific */ main()
 {
     int i;
     char stop;
-	for (i = 1; i<= 5; i++){ // This should keep the app running till stop
+	for (i = 1; i<= 5; i++){ // This should keep this function running till stop
 
         if(i >= 2){
-
-            scientificMenu();
             printf("Input E to return to mode selection\nPress any other key to continue\n");
             printf("> ");
             scanf("%s", &stop);
@@ -24,33 +22,46 @@ void /*scientific */ main()
                 // for now return 0 should exit, till we link the mode
             }
         }
+        scientificMenu(); // call scientific menu
     }
 }
 
 
 int scientificMenu(){
-    int choice;
-	printf("\nInput:\n");
-	printf("1. Square root\n");
-	printf("2. Square\n");
-	printf("3. tan, cos, sin. and it's inverse\n");
-    printf("> ");
-	scanf("%d", &choice);
+    int i;
+    int isValid = 1;
 
-	switch (choice)
-	{
-		case 1:
-            square_root();
-		    break;
-		case 2:
-            square();
-		    break;
-		case 3:
-            trig();
-		    break;
-		default : 
-            printf("Invalid Input");
-	}
+    for (isValid = 1; i <= 4; i++){ // if the user enters an invalid input, this will loop the menu, till input is correct
+
+        int choice;
+        printf("\nInput:\n");
+        printf("1. Square root\n");
+        printf("2. Square\n");
+        printf("3. tan, cos, sin. and it's inverse\n");
+        printf("> ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1:
+                square_root();
+                break;
+            case 2:
+                square();
+                break;
+            case 3:
+                trig();
+                break;
+            default : 
+                printf("\nInvalid Input!\n");
+        }
+
+        if (choice == 1 || choice == 2 || choice == 3)
+        {
+            isValid = 0;
+            break; // exit this function, if the choice was correctly chosen and finished calculation
+        }
+    }
 	return 0;
 }
 
@@ -60,7 +71,7 @@ void square_root()
 	system("cls"); // the <system cls> clears the screen as soon as the square root function is called
 	printf("Enter number: ");
 	scanf("%lf", &num);
-	result=pow(num,0.5);
+	result = pow(num,0.5);
 	printf("The square root of %lf ", num);
 	printf("is : %lf\n", result);
 	puts("\n"); // puts is the same as printf lol	
@@ -96,42 +107,42 @@ void trig()
 
     switch(select)
     {
-    case 1:
+    case 1: // tangent
         printf("Enter number: ");
         scanf("%f", &num);
         result = tan(num);
         printf("tan of %.2f is: %.2f", num, result);
         break;
 
-    case 2:
+    case 2: // cosine
         printf("Enter number: ");
         scanf("%f", &num);
         result = cos(num);
         printf("cos of %.2f is: %.2f", num, result);
         break;
 
-    case 3:
+    case 3: // sine
         printf("Enter number: ");
         scanf("%f", &num);
         result = sin(num);
         printf("sin of %.2f is: %.2f", num, result);
         break;
 
-    case 4:
+    case 4: // cosecant
         printf("Enter number: ");
         scanf("%f", &num);
         result = acos(num);
         printf("cos inverse of %.2f is: %.2f", num, result);
         break;
 
-    case 5:
+    case 5: // cot
         printf("Enter number: ");
         scanf("%f", &num);
         result = atan(num);
         printf("tan inverse of %.2f is: %.2f", num, result);
         break;
 
-    case 6:
+    case 6: // secant
         printf("Enter number: ");
         scanf("%f", &num);
         result = asin(num);
