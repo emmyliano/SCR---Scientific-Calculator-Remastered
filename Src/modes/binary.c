@@ -1,5 +1,12 @@
 #include<stdio.h>
-void main()
+void D2B(); // decimal to binary conversion
+void B2D(); // binary to decimal conversion
+int main ( )
+{
+	
+return 0;
+}
+void D2B()
 {
 long num,i,temp;
 printf("Input a number to find binary code\n");
