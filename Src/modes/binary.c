@@ -3,6 +3,20 @@ void D2B(); // decimal to binary conversion
 void B2D(); // binary to decimal conversion
 int main ( )
 {
+	int option;
+	printf("Enter :\n");
+	printf("1. DECI to BIN\n");
+	printf("2. BIN to DECI\n");
+	scanf("%d", &option);
+	
+	switch (option)
+	{
+		case 1 : D2B(); // calling the function
+		break;
+		case 2 : B2D( );
+	}
+	
+	
 	
 return 0;
 }
@@ -28,4 +42,8 @@ temp=temp/2;
 printf("0");
 }
 }
+}
+
+void B2D()
+{
 }
