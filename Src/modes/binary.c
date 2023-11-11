@@ -6,6 +6,7 @@ int main ( )
 	
 return 0;
 }
+
 void D2B()
 {
 long num,i,temp;
@@ -27,6 +28,4 @@ temp=temp/2;
 printf("0");
 }
 }
-}
-return 0;
 }
