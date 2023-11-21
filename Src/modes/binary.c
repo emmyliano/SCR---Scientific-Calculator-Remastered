@@ -11,12 +11,12 @@ int main()
    for (isValid = 1; i <= 4; i++){ // if the user enters an invalid input, this will loop the menu, till input is correct
       int option;
 
-      printf("Enter :\n");
-      printf("1. DECI to BIN\n");
-      printf("2. BIN to DECI\n");
+      printf("Enter:\n");
+      printf("1. Convert Decimal to Binary\n");
+      printf("2. Convert Binary to Decimal\n");
       printf("3. Return to main menu\n");
       printf("4. Exit the program\n");
-      printf("> ");
+      printf("\n> ");
       scanf("%d", &option);
       
       switch (option)
@@ -28,11 +28,11 @@ int main()
          break;
 
          case 3:
-            system("cls");
+            system("cls"); // clear the screen
             continue;
             // link the main menu here
 
-         case 4:
+         case 4: // initiate a direct termination of the program
             printf("The program has been terminated");
             return 0;
 
@@ -74,5 +74,20 @@ void D2B()
 
 void B2D()
 { 
-   
+   int num, binary_num, decimal_num = 0, base = 1, rem;  
+   printf ("\nEnter binary number: ");  
+   scanf ("%d", &num); // accept the binary number (0s and 1s)  
+
+   binary_num = num; // assign the binary number to the binary_num variable  
+
+
+   while ( num > 0)  
+   {  
+      rem = num % 10; /* divide the binary number by 10 and store the remainder in rem variable. */  
+      decimal_num = decimal_num + rem * base;  
+      num = num / 10; // divide the number with quotient  
+      base = base * 2;  
+   }  
+
+   printf ("\n%d(base 2) =\t%d(decimal)\n\n", binary_num, decimal_num); // \t will create a horizontal spacing for emphasis
 }
