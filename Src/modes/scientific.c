@@ -38,6 +38,8 @@ int scientificMenu(){
         printf("1. Square root\n");
         printf("2. Square\n");
         printf("3. tan, cos, sin. and it's inverse\n");
+        printf("4. Return to main menu\n");
+        printf("5. Exit the program\n");
         printf("> ");
         scanf("%d", &choice);
 
@@ -52,6 +54,13 @@ int scientificMenu(){
             case 3:
                 trig();
                 break;
+            case 4:
+                system("cls");
+                continue;
+            // link the main menu here
+            case 5:
+                printf("The program has been terminated");
+                return 0;
             default : 
                 printf("\nInvalid Input!\n");
         }
