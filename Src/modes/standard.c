@@ -2,7 +2,7 @@
 #include <stdlib.h>
 void standard();
 
-void standard()
+int main ()
 {
     char operator;
     double num1, num2, result;
@@ -10,8 +10,9 @@ void standard()
 
     while (choice == 'y' || choice == 'Y')
     {  
-        printf("press 'e' to exit, 'm' to go back to mode selection ");
+        printf("Press 'e' to Exit, 'm' to go back to Mode selection ");
         printf("\n\n");
+        printf("*******CALCULATOR******\n");
         printf("Enter an operator: ");
         scanf(" %c", &operator);
 
@@ -32,20 +33,20 @@ void standard()
         switch (operator) {
             case '+':
                 result = num1 + num2;
-                printf("Result: %lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             case '-':
                 result = num1 - num2;
-                printf("Result: %lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             case '*':
                 result = num1 * num2;
-                printf("Result: %lf\n", result);
+                printf("Result: %.2lf\n", result);
                 break;
             case '/':
                 if (num2 != 0) {
                     result = num1 / num2;
-                    printf("Result: %lf\n", result);
+                    printf("Result: %.2lf\n", result);
                 } else {
                     printf("Error: Division by zero\n");
                 }
