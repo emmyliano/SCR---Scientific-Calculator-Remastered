@@ -81,8 +81,8 @@ void square_root()
 	printf("Enter number: ");
 	scanf("%lf", &num);
 	result = pow(num,0.5);
-	printf("The square root of %lf ", num);
-	printf("is : %lf\n", result);
+	printf("The square root of %.2lf ", num);
+	printf("is : %.2lf\n", result);
 	puts("\n"); // puts is the same as printf lol	
 }
 
@@ -94,8 +94,8 @@ void square()
 	printf("Enter number: ");
 	scanf("%f", &num);
 	result = num * num;
-	printf("The square of %.0f ", num);
-	printf("is : %.0f\n", result);	
+	printf("The square of %.2f ", num);
+	printf("is : %.2f\n", result);	
 	puts("\n"); //puts is the same as printf lol
 }
 
