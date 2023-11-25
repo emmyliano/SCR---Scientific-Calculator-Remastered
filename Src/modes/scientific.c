@@ -5,7 +5,7 @@ void square();
 void trig();
 int scientificMenu();
 
-void /*scientific */ main()
+int /*scientific */ main()
 {
     int i;
     char stop;
