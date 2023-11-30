@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<standard.h>
+#include<scientific.h>
+#include<binary.h>
 int menu();
 
 int menu()
