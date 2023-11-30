@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include"scientific.h"
 void square_root();
 void square();
 void trig();
