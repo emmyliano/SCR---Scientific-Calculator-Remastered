@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"binary.h"
 void D2B(); // decimal to binary conversion
 void B2D(); // binary to decimal conversion
 
