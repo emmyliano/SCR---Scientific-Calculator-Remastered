@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include"standard.h"
-void standard();
 
 int main ()
 {
