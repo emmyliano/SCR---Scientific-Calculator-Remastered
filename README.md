@@ -15,8 +15,10 @@ Scientific Calculator Remastered
  3. BINARY CONVERSION (octa, deci, hexa, ...)
 
 - Code base in C
-- To ensure the program works properly, compile all necessary files in this repository together before running the code. Preferably, compile it using GCC into an SCR.exe format for Windows or a compatible format for your operating system (Linux, Unix, Mac).
-- want to understand how the program works? read the [official Documentation](Documentation.txt)
+- To ensure the program works properly, compile all necessary files in this repository together before
+  running the code. Preferably, compile it using GCC into an SCR.exe format for Windows or a compatible
+  format for your operating system (Linux, Unix, Mac).
+- Don't understand how the program works? read the [official Documentation](Documentation.txt)
 
 ### DEVELOPERS
 
