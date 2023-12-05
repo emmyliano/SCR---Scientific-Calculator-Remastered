@@ -1,0 +1,10 @@
+Program Description
+
+A scientific calculator coded in C that handles basic arithmetic calculations, binary conversions, and scientific functions such as trigonometry and square roots.
+
+How the Program was Created?
+
+We developed the scientific calculator with three modes: standard, scientific, and binary. Each mode has its own source code—standard.c, scientific.c, and binary.c—which reside in the modes directory of this repository. With the help header files and custom library creation in C, we linked these modes to a simple program named main.c. 
+And if you don't know how header files work, a quick Google search is recommended, as we do not need to explain this.
+
+To ensure the program works properly, compile all necessary files in this repository together before running the code. Preferably, compile it using GCC into an SCR.exe format for Windows or a compatible format for your operating system (Linux, Unix, Mac).
